@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alisson Almeida de Oliveira - Desenvolvedor Full-Stack</title>
+    
+    <!-- Meta Tags de Segurança -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+        font-src 'self' https://cdnjs.cloudflare.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        frame-ancestors 'none';
+    ">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#7c0808">
+    <meta name="description" content="Desenvolvedor Full-Stack com experiência em Java, Spring Boot, Node.js, React e Python">
+    
+    <!-- Preload e Preconnect para performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Font Awesome com SRI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer">
+    
+    <!-- Fallback para CSS caso CDN falhe -->
+    <noscript>
+        <style>
+            .fas, .fab {
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                background-color: currentColor;
+                border-radius: 2px;
+            }
+            .fa-user::before { content: "👤"; }
+            .fa-envelope::before { content: "✉️"; }
+            .fa-phone::before { content: "📞"; }
+            .fa-map-marker-alt::before { content: "📍"; }
+            .fa-github::before { content: "🐙"; }
+            .fa-linkedin::before { content: "💼"; }
+        </style>
+    </noscript>
+
+    <link rel="stylesheet" href="curr.css">
+</head>
+<body>
+    <!-- Proteção contra clickjacking -->
+    <script>
+        if (self !== top) {
+            top.location = self.location;
+        }
+    </script>
+    
+    <header>
+        <div class="container">
+            <!-- Imagem de perfil com lazy loading -->
+            <div style="background-color: #000102; width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-user" style="font-size: 60px; color: #ffffff;"></i>
+            </div>
+            <h1>Alisson Almeida de Oliveira</h1>
+            <p class="tagline">Desenvolvedor Full-Stack</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span id="email-text" data-email="Y29udGF0b0BhbGlzc29uYWxtZWlkYS5jb20=">carregando...</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+55 (46) 99942-0574</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Santa Catarina, Brasil</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title">Resumo Profissional</h2>
+            <p>Desenvolvedor Full-Stack com sólida experiência em arquitetura de software, integração de sistemas e otimização de aplicações web. Atua no desenvolvimento de soluções escaláveis utilizando Java/Spring Boot, Node.js/Express, Python/Flask e React/Next.js, com foco em alta performance, segurança e boas práticas de engenharia de software.</p>
+            <br>
+            <p>Experiência comprovada em:</p>
+            <ul>
+                <li>Design e implementação de APIs RESTful com autenticação JWT e integração com bancos relacionais</li>
+                <li>Desenvolvimento de front-ends reativos com React e Next.js, aplicando princípios de componentização e Clean Architecture</li>
+                <li>Refatoração e otimização de código legado, reduzindo tempo de resposta e consumo de recursos</li>
+                <li>Deploy e versionamento com Docker, Git </li>
+            </ul>
+            <br>
+            <p>Profissional orientado a resultados, com mentalidade DevOps, domínio de boas práticas de versionamento, testes automatizados e documentação técnica. Aberto a desafios em ambientes remotos, híbridos ou presenciais.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Competências Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Linguagens</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C#</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Back-end</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Front-end</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Material-UI</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Banco de Dados</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & Ferramentas</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Comunicação técnica</span>
+                        <span class="skill-tag">Proatividade</span>
+                        <span class="skill-tag">Organização</span>
+                        <span class="skill-tag">Resolução de problemas complexos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Experiência Profissional</h2>
+            
+            <div class="experience-item">
+                <div class="job-title">Freelancer — Desenvolvedor Full-Stack</div>
+                <div class="company">Projeto Autônomo</div>
+                <div class="date">Jun 2025 – Set 2025 | Remoto</div>
+                <div class="responsibilities">
+                    <p>Atuação na otimização e refatoração de uma plataforma SaaS de autoatendimento e intermediação de chamadas via WhatsApp, com foco em escalabilidade, resiliência e melhoria de performance.</p>
+                    <br>
+                    <p><strong>Back-end (Flask):</strong></p>
+                    <ul>
+                        <li>Refatoração de serviços críticos aplicando boas práticas</li>
+                        <li>Correção de falhas em endpoints REST</li>
+                        <li>Implementação de tratamento de exceções centralizado e logs estruturados</li>
+                        <li>Melhoria da arquitetura para suportar maior volume de requisições simultâneas</li>
+                    </ul>
+                    <br>
+                    <p><strong>Front-end (React):</strong></p>
+                    <ul>
+                        <li>Refatoração de componentes para melhor reuso e performance</li>
+                        <li>Correção de inconsistências de UI/UX e otimização de renderização</li>
+                        <li>Implementação de hooks customizados e melhoria de responsividade</li>
+                    </ul>
+                    <br>
+                    <p><strong>Resultados:</strong></p>
+                    <ul>
+                        <li>Redução de 40% no tempo médio de resposta da API</li>
+                        <li>Aumento da estabilidade e escalabilidade da aplicação</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-title">Desenvolvedor Full-Stack</div>
+                <div class="company">WhaticketSaaS</div>
+                <div class="date">Mai 2024 – Nov 2024 | Remoto</div>
+                <div class="responsibilities">
+                    <p>Responsável pelo desenvolvimento e manutenção de módulos críticos em um sistema SaaS de comunicação e automação empresarial.</p>
+                    <br>
+                    <p><strong>Principais entregas:</strong></p>
+                    <ul>
+                        <li>Implementação completa do módulo de transcrição de áudio (end-to-end)</li>
+                        <li>Criação de API RESTful em Node.js/Express com TypeScript e integração com PostgreSQL</li>
+                        <li>Desenvolvimento de interface reativa com React e Material-UI</li>
+                        <li>Aplicação de testes unitários e integração contínua</li>
+                        <li>Correção de bugs críticos e otimização de queries SQL</li>
+                    </ul>
+                    <br>
+                    <p><strong>Impacto:</strong></p>
+                    <ul>
+                        <li>Novo módulo funcional integrado à plataforma, ampliando o portfólio de serviços</li>
+                        <li>Melhoria significativa na confiabilidade, latência e estabilidade do sistema</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Projetos Relevantes</h2>
+            
+            <div class="project-item">
+                <div class="job-title">Cardápio Digital Inteligente</div>
+                <div class="date">Ago 2025 – Atual</div>
+                <div class="project-stack">
+                    <span class="stack-tag">React</span>
+                    <span class="stack-tag">TypeScript</span>
+                    <span class="stack-tag">Tailwind CSS</span>
+                    <span class="stack-tag">Google Maps API</span>
+                    <span class="stack-tag">Vite</span>
+                </div>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Implementação de <strong>cálculo dinâmico de taxa de entrega via geolocalização</strong></li>
+                        <li>Integração com WhatsApp API para envio automático de pedidos</li>
+                        <li><strong>Carrinho de compras em tempo real</strong> com gerenciamento de estado global</li>
+                        <li>Painel administrativo com <strong>autenticação JWT e controle de acesso</strong></li>
+                    </ul>
+                    <br>
+                    <p><strong>Impacto:</strong> Redução de 90% nos erros de pedidos e aumento da eficiência operacional.</p>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="job-title">Ecostoque — Sistema Multiplataforma de Estoque</div>
+                <div class="date">Jun 2025 – Atual</div>
+                <div class="project-stack">
+                    <span class="stack-tag">Flask</span>
+                    <span class="stack-tag">HTML5</span>
+                    <span class="stack-tag">CSS3</span>
+                    <span class="stack-tag">JavaScript</span>
+                </div>
+                <div class="responsibilities">
+                    <ul>
+                        <li>CRUD completo de produtos com <strong>validação de dados e controle transacional</strong></li>
+                        <li>Relatórios dinâmicos e histórico de movimentações</li>
+                        <li>Indicadores visuais e <strong>dashboards analíticos</strong></li>
+                        <li>Solução voltada para micro e pequenas empresas, com foco em usabilidade e simplicidade</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div class="education-item">
+                <div class="job-title">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+                <div class="company">Católica de Santa Catarina – Centro Universitário</div>
+                <div class="date">Out 2024 – Abr 2027 (em andamento)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Certificações</h2>
+            <div class="certification-item">
+                <div class="job-title">Explorando o Framework Flask — Rocketseat (2025)</div>
+                <div>Código da credencial: 52e76bca-e614-45dc-9b1a-bb5d788b96f2</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Idiomas</h2>
+            <div class="language-item">
+                <span class="language-name">Português</span>
+                <span class="language-level">Nativo</span>
+            </div>
+            <div class="language-item">
+                <span class="language-name">Inglês</span>
+                <span class="language-level">Básico / Intermediário</span>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Alisson Almeida de Oliveira. Todos os direitos reservados.</p>
+            <div class="footer-links" style="margin-top: 10px;">
+                <a href="https://github.com/alissonkl20" target="_blank" rel="noopener noreferrer" class="github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/alisson-almeida-de-oliveira-3406bb347/" target="_blank" rel="noopener noreferrer" class="linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="#" id="safe-email" rel="noopener noreferrer" class="email">
+                    <i class="fas fa-envelope"></i> E-mail
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Segurança -->
+    <script>
+        // Ofuscação de e-mail para proteção contra scrapers
+        document.addEventListener('DOMContentLoaded', function() {
+            // Decodificar e-mail ofuscado
+            const emailElement = document.getElementById('email-text');
+            if (emailElement) {
+                try {
+                    const encodedEmail = emailElement.getAttribute('data-email');
+                    const decodedEmail = atob(encodedEmail);
+                    emailElement.textContent = decodedEmail;
+                } catch (e) {
+                    emailElement.textContent = 'contato@alissonalmeida.com';
+                }
+            }
+            
+            // Proteção para link de e-mail
+            const emailLink = document.getElementById('safe-email');
+            if (emailLink) {
+                emailLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'mailto:contato@alissonalmeida.com?subject=Contato%20via%20Currículo';
+                });
+            }
+            
+            // Log de segurança (apenas em desenvolvimento)
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.log('%c🔒 Página segura - Currículo Alisson Almeida', 
+                    'color: #7c0808; font-weight: bold; font-size: 14px;');
+            }
+        });
+
+        // Prevenção de hotlinking básica
+        if (document.referrer && !document.referrer.includes(window.location.hostname)) {
+            // Pode adicionar analytics ou logging aqui
+            console.log('Acesso externo detectado:', document.referrer);
+        }
+
+        // Detecção de recursos desabilitados
+        if (!window.atob) {
+            document.getElementById('email-text').textContent = 'contato@alissonalmeida.com';
+        }
+    </script>
+</body>
+</html>
