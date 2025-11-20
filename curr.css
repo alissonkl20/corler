@@ -389,3 +389,95 @@ footer {
     border: 1px solid var(--error);
     background-color: rgba(231, 76, 60, 0.1);
 }
+
+/* Botão de Download PDF */
+.download-btn {
+    background: linear-gradient(135deg, var(--base), var(--secondary));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--secondary), var(--base));
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+/* Loading state */
+.download-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.download-btn.loading::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 
+
+/* From Uiverse.io by Shoh2008 */ 
+.loader {
+  width: 84px;
+  height: 84px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader:before , .loader:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgb(13, 2, 168);
+  transform: translate(-50% , 100%)  scale(0);
+  animation: push_4051 2s infinite ease-in;
+}
+
+.loader:after {
+  animation-delay: 1s;
+}
+
+@keyframes push_4051 {
+  0% {
+    transform: translate(-50% , 100%)  scale(1);
+  }
+
+  15% , 25% {
+    transform: translate(-50% , 50%)  scale(1);
+  }
+
+  50% , 75% {
+    transform: translate(-50%, -30%) scale(0.5);
+  }
+
+  80%,  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+  

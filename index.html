@@ -59,11 +59,18 @@
         }
     </script>
     
+        
+    <div class="container" style="text-align: center; margin-bottom: 20px;">
+        <button id="download-pdf" class="download-btn">
+            <i class="fas fa-download"></i> Baixar Currículo PDF
+        </button>
+    </div>
+
     <header>
         <div class="container">
             <!-- Imagem de perfil com lazy loading -->
             <div style="background-color: #000102; width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-user" style="font-size: 60px; color: #ffffff;"></i>
+                <div class="loader"></div>
             </div>
             <h1>Alisson Almeida de Oliveira</h1>
             <p class="tagline">Desenvolvedor Full-Stack</p>
@@ -351,5 +358,51 @@
             document.getElementById('email-text').textContent = 'contato@alissonalmeida.com';
         }
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const downloadBtn = document.getElementById('download-pdf');
+    
+    downloadBtn.addEventListener('click', function() {
+        // Mostra estado de loading
+        downloadBtn.classList.add('loading');
+        downloadBtn.innerHTML = '<i class="fas fa-spinner"></i> Gerando PDF...';
+        
+        // Elemento a ser convertido para PDF
+        const element = document.body;
+        
+        // Configurações do PDF
+        const opt = {
+            margin: [10, 10, 10, 10],
+            filename: 'Alisson_Almeida_Curriculo.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { 
+                scale: 2,
+                useCORS: true,
+                logging: false
+            },
+            jsPDF: { 
+                unit: 'mm', 
+                format: 'a4', 
+                orientation: 'portrait' 
+            },
+            pagebreak: { 
+                mode: ['avoid-all', 'css', 'legacy'] 
+            }
+        };
+        
+        // Gera o PDF
+        html2pdf().set(opt).from(element).save().then(() => {
+            // Restaura o botão
+            setTimeout(() => {
+                downloadBtn.classList.remove('loading');
+                downloadBtn.innerHTML = '<i class="fas fa-download"></i> Baixar Currículo PDF';
+            }, 1000);
+        });
+    });
+});
+</script>
+
 </body>
 </html>
